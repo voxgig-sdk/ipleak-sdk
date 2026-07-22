@@ -1,0 +1,176 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Ipleak API",
+    "description": "The Ipleak API provides functionalities for accessing information about your IP address and its associated details, including geolocation and privacy implications. It aggregates data from the ipleak.net website to help users understand what information can be collected by different websites.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/ipleak"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://ipleak.net",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/json/{ip}": {
+      "get": {
+        "summary": "Get IP information",
+        "description": "Retrieves detailed information about the specified IP address, including geolocation data and privacy-related details. This is the kind of information that all the sites you visit, as well as their advertisers and any embedded widget, can see and collect about you.",
+        "operationId": "getIpInfo",
+        "tags": [
+          "IP Information"
+        ],
+        "parameters": [
+          {
+            "name": "ip",
+            "in": "path",
+            "description": "The IP address to lookup (e.g., 1.1.1.1)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "ipv4",
+              "example": "1.1.1.1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with IP information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ip": {
+                      "type": "string",
+                      "description": "The IP address queried",
+                      "example": "1.1.1.1"
+                    },
+                    "country_code": {
+                      "type": "string",
+                      "description": "ISO country code",
+                      "example": "US"
+                    },
+                    "country_name": {
+                      "type": "string",
+                      "description": "Country name",
+                      "example": "United States"
+                    },
+                    "city": {
+                      "type": "string",
+                      "description": "City name",
+                      "example": "Los Angeles"
+                    },
+                    "region": {
+                      "type": "string",
+                      "description": "Region or state",
+                      "example": "California"
+                    },
+                    "latitude": {
+                      "type": "number",
+                      "format": "float",
+                      "description": "Latitude coordinate",
+                      "example": 34.0522
+                    },
+                    "longitude": {
+                      "type": "number",
+                      "format": "float",
+                      "description": "Longitude coordinate",
+                      "example": -118.2437
+                    },
+                    "asn": {
+                      "type": "string",
+                      "description": "Autonomous System Number",
+                      "example": "AS13335"
+                    },
+                    "asn_org": {
+                      "type": "string",
+                      "description": "Organization associated with the ASN",
+                      "example": "Cloudflare, Inc."
+                    },
+                    "isp": {
+                      "type": "string",
+                      "description": "Internet Service Provider",
+                      "example": "Cloudflare"
+                    },
+                    "timezone": {
+                      "type": "string",
+                      "description": "Timezone of the IP location",
+                      "example": "America/Los_Angeles"
+                    },
+                    "postal_code": {
+                      "type": "string",
+                      "description": "Postal code",
+                      "example": "90001"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid IP address format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Invalid IP address format"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "IP address not found or no information available",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "IP address not found"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "IP Information",
+      "description": "Operations related to IP address information lookup"
+    }
+  ],
+  "externalDocs": {
+    "description": "API Documentation on GitHub",
+    "url": "https://github.com/l0v3m0n3y/ipleak"
+  }
+}

@@ -1,0 +1,118 @@
+# Entity: ip_information
+
+main: kit: entity: ip_information: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "asn"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "asn_org"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "city"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "country_code"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "country_name"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "ip"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "isp"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "latitude"
+      req: false
+      type: "`$NUMBER`"
+    }
+    {
+      name: "longitude"
+      req: false
+      type: "`$NUMBER`"
+    }
+    {
+      name: "postal_code"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "region"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "timezone"
+      req: false
+      type: "`$STRING`"
+    }
+  ]
+
+  name: "ip_information"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          args: {
+            params: [
+              {
+                example: "1.1.1.1"
+                kind: "param"
+                name: "ip"
+                orig: "ip"
+                reqd: true
+                type: "`$STRING`"
+              }
+            ]
+          }
+          method: "GET"
+          orig: "/json/{ip}"
+          parts: [
+            "json"
+            "{ip}"
+          ]
+          select: {
+            exist: [
+              "ip"
+            ]
+          }
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  relations: {
+    ancestors: [
+      [
+        "json"
+      ]
+    ]
+  }
+
+
+
+}

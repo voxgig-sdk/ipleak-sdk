@@ -1,0 +1,69 @@
+{
+  "existing": {
+    "ip_information": {
+      "IP_INFORMATION00": {
+        "asn": "s78",
+        "asn_org": "s79",
+        "city": "s7a",
+        "country_code": "s7b",
+        "country_name": "s7c",
+        "ip": "s7d",
+        "isp": "s7e",
+        "latitude": 127,
+        "longitude": 128,
+        "postal_code": "s81",
+        "region": "s82",
+        "timezone": "s83",
+        "id": "IP_INFORMATION00"
+      },
+      "IP_INFORMATION01": {
+        "asn": "sf0",
+        "asn_org": "sf1",
+        "city": "sf2",
+        "country_code": "sf3",
+        "country_name": "sf4",
+        "ip": "sf5",
+        "isp": "sf6",
+        "latitude": 247,
+        "longitude": 248,
+        "postal_code": "sf9",
+        "region": "sfa",
+        "timezone": "sfb",
+        "id": "IP_INFORMATION01"
+      },
+      "IP_INFORMATION02": {
+        "asn": "s168",
+        "asn_org": "s169",
+        "city": "s16a",
+        "country_code": "s16b",
+        "country_name": "s16c",
+        "ip": "s16d",
+        "isp": "s16e",
+        "latitude": 367,
+        "longitude": 368,
+        "postal_code": "s171",
+        "region": "s172",
+        "timezone": "s173",
+        "id": "IP_INFORMATION02"
+      }
+    }
+  },
+  "new": {
+    "ip_information": {
+      "ip_information_ref01": {
+        "asn": "s1e0",
+        "asn_org": "s1e1",
+        "city": "s1e2",
+        "country_code": "s1e3",
+        "country_name": "s1e4",
+        "ip": "s1e5",
+        "isp": "s1e6",
+        "latitude": 487,
+        "longitude": 488,
+        "postal_code": "s1e9",
+        "region": "s1ea",
+        "timezone": "s1eb"
+      }
+    }
+  }
+}

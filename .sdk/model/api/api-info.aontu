@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/ipleak"
+      }
+      description: "The Ipleak API provides functionalities for accessing information about your IP address and its associated details, including geolocation and privacy implications. It aggregates data from the ipleak.net website to help users understand what information can be collected by different websites."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://ipleak.net"
+        }
+      ]
+      summary: "The Ipleak API provides functionalities for accessing information about your IP address and its associated details, including geolocation and privacy implications."
+      title: "Ipleak API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/ipleak"
+    }
+  }
+}
+
