@@ -132,6 +132,7 @@ module IpleakConfig
                       },
                     ],
                   },
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/json/{ip}",
                   "parts" => [

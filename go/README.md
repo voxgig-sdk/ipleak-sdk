@@ -66,7 +66,7 @@ Every entity operation returns `(value, error)`. Check `err` before
 using the value — there is no exception to catch:
 
 ```go
-ipinformation, err := client.IpInformation(nil).Load(nil, nil)
+ipinformation, err := client.IpInformation(nil).Load(map[string]any{"ip": "example"}, nil)
 if err != nil {
     // handle err
     return
@@ -136,7 +136,7 @@ Create a mock client for unit testing — no server required:
 client := sdk.Test()
 
 ipInformation, err := client.IpInformation(nil).Load(
-    nil, nil,
+    map[string]any{"ip": "example"}, nil,
 )
 if err != nil {
     panic(err)
@@ -392,7 +392,7 @@ stores the returned data and match criteria internally.
 
 ```go
 ipinformation := client.IpInformation(nil)
-ipinformation.Load(nil, nil)
+ipinformation.Load(map[string]any{"ip": "example"}, nil)
 
 // ipinformation.Data() now returns the ipinformation data from the last load
 // ipinformation.Match() returns the last match criteria

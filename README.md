@@ -23,7 +23,7 @@ support (`load`):
 
 ```ts
 const client = new IpleakSDK()
-const ipinformation = await client.IpInformation().load()
+const ipinformation = await client.IpInformation().load({ ip: "example" })
 ```
 
 Thinking in entities keeps the mental model small — for people and AI agents alike —
@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = IpleakSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = IpleakSDK.test({
+  entity: {
+    ip_information: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const ipinformation = await client.IpInformation().load({ ip: 'example_ip' })
-// ipinformation is a bare IpInformation populated with mock data
+// ipinformation is the IpInformation entity, populated with mock data
+// — call ipinformation.data() for the record itself
 console.log(ipinformation)
 ```
 
@@ -185,7 +194,7 @@ require_once 'ipleak_sdk.php';
 $client = new IpleakSDK();
 
 
-// Load a specific ipinformation (returns the bare record; throws on error)
+// Load a specific ipinformation (returns the ENTITY; call data_get() for the record; throws on error)
 $ipinformation = $client->IpInformation()->load(["ip" => "example_ip"]);
 print_r($ipinformation);
 ```
@@ -216,7 +225,7 @@ require_relative "Ipleak_sdk"
 client = IpleakSDK.new
 
 
-# Load a specific ipinformation (returns the bare record; raises on error)
+# Load a specific ipinformation (returns the ENTITY; call data_get for the record)
 ipinformation = client.IpInformation.load({ "ip" => "example_ip" })
 puts ipinformation
 ```
@@ -350,6 +359,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/ipleak](https://github.com/l0v3m0n3y/ipleak)
 

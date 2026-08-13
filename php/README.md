@@ -37,7 +37,7 @@ IpInformation is nested under ip, so provide the `ip`.
 
 ```php
 try {
-    // load() returns the bare IpInformation record (throws on error).
+    // load() returns the ENTITY — call data_get() for the IpInformation record (throws on error).
     $ipinformation = $client->IpInformation()->load(["ip" => "example_ip"]);
     print_r($ipinformation);
 } catch (\Throwable $err) {
@@ -53,7 +53,7 @@ Entity operations throw a `\Throwable` on failure, so wrap them in
 
 ```php
 try {
-    $ipinformation = $client->IpInformation()->load();
+    $ipinformation = $client->IpInformation()->load(["ip" => "example"]);
 } catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
 }
@@ -125,8 +125,9 @@ Create a mock client for unit testing — no server required:
 ```php
 $client = IpleakSDK::test();
 
-// Entity ops return the bare mock record (throws on error).
-$ipinformation = $client->IpInformation()->load();
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
+$ipinformation = $client->IpInformation()->load(["ip" => "example"]);
 print_r($ipinformation);
 ```
 
@@ -224,7 +225,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -298,7 +299,7 @@ Create an instance: `$ip_information = $client->IpInformation();`
 #### Example: Load
 
 ```php
-// load() returns the bare IpInformation record (throws on error).
+// load() returns the ENTITY — call data_get() for the IpInformation record (throws on error).
 $ip_information = $client->IpInformation()->load(["ip" => "ip"]);
 ```
 
@@ -380,7 +381,7 @@ stores the returned data and match criteria internally.
 
 ```php
 $ipinformation = $client->IpInformation();
-$ipinformation->load();
+$ipinformation->load(["ip" => "example"]);
 
 // $ipinformation->data_get() now returns the ipinformation data from the last load
 // $ipinformation->match_get() returns the last match criteria

@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ IpleakUtility.registrar = ->(u) {
   u.prepare_params = IpleakUtilities::PrepareParams
   u.prepare_path = IpleakUtilities::PreparePath
   u.prepare_query = IpleakUtilities::PrepareQuery
+  u.graphql_body = IpleakUtilities::GraphqlBody
+  u.graphql_errors = IpleakUtilities::GraphqlErrors
   u.result_basic = IpleakUtilities::ResultBasic
   u.result_body = IpleakUtilities::ResultBody
   u.result_headers = IpleakUtilities::ResultHeaders

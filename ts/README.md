@@ -56,7 +56,7 @@ Entity operations reject on failure, so wrap them in `try` / `catch`:
 
 ```ts
 try {
-  const ipinformation = await client.IpInformation().load()
+  const ipinformation = await client.IpInformation().load({ ip: "example" })
   console.log(ipinformation)
 } catch (err) {
   console.error('load failed:', err)
@@ -123,8 +123,9 @@ Create a mock client for unit testing — no server required:
 ```ts
 const client = IpleakSDK.test()
 
-const ipinformation = await client.IpInformation().load()
-// ipinformation is a bare entity populated with mock response data
+const ipinformation = await client.IpInformation().load({ ip: 'example_ip' })
+// ipinformation is the entity, populated with mock response data
+// — call ipinformation.data() for the record itself
 console.log(ipinformation)
 ```
 
@@ -143,7 +144,7 @@ Entity instances remember their last match and data:
 const entity = client.IpInformation()
 
 // First call runs the operation and stores its result
-await entity.load()
+await entity.load({ ip: 'example_ip' })
 
 // Subsequent calls reuse the stored state
 const data = entity.data()
@@ -413,7 +414,7 @@ calls on the same instance can rely on this state.
 
 ```ts
 const ipinformation = client.IpInformation()
-await ipinformation.load()
+await ipinformation.load({ ip: "example" })
 
 // ipinformation.data() now returns the ipinformation data from the last `load`
 // ipinformation.match() returns the last match criteria

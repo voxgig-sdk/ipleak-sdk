@@ -36,7 +36,7 @@ IpInformation is nested under ip, so provide the `ip`.
 
 ```ruby
 begin
-  # load returns the bare IpInformation record (raises on error).
+  # load returns the ENTITY — call data_get for the IpInformation record (raises on error).
   ipinformation = client.IpInformation.load({ "ip" => "example_ip" })
   puts ipinformation
 rescue => err
@@ -51,7 +51,7 @@ Entity operations raise on failure, so rescue them:
 
 ```ruby
 begin
-  ipinformation = client.IpInformation.load()
+  ipinformation = client.IpInformation.load({ "ip" => "example" })
 rescue => err
   warn "load failed: #{err}"
 end
@@ -119,8 +119,9 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = IpleakSDK.test
 
-# Entity ops return the bare mock record (raises on error).
-ipinformation = client.IpInformation.load()
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
+ipinformation = client.IpInformation.load({ "ip" => "example" })
 puts ipinformation
 ```
 
@@ -288,7 +289,7 @@ Create an instance: `ip_information = client.IpInformation`
 #### Example: Load
 
 ```ruby
-# load returns the bare IpInformation record (raises on error).
+# load returns the ENTITY — call data_get for the IpInformation record (raises on error).
 ip_information = client.IpInformation.load({ "ip" => "ip" })
 ```
 
@@ -370,7 +371,7 @@ stores the returned data and match criteria internally.
 
 ```ruby
 ipinformation = client.IpInformation
-ipinformation.load()
+ipinformation.load({ "ip" => "example" })
 
 # ipinformation.data_get now returns the ipinformation data from the last load
 # ipinformation.match_get returns the last match criteria

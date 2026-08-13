@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import IpleakSDK
-from core.error import IpleakError
-from core.result import IpleakResult
-from core.response import IpleakResponse
-from core.spec import IpleakSpec
-from feature.base_feature import IpleakBaseFeature
+from projectname_sdk.core.error import IpleakError
+from projectname_sdk.core.result import IpleakResult
+from projectname_sdk.core.response import IpleakResponse
+from projectname_sdk.core.spec import IpleakSpec
+from projectname_sdk.feature.base_feature import IpleakBaseFeature
 
 
 def _client():

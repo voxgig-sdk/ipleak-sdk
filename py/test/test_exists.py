@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# Ipleak SDK exists test
 
 import pytest
 from ipleak_sdk import IpleakSDK
