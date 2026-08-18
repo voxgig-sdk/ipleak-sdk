@@ -40,7 +40,7 @@ class IpleakSDK
         $utility = new IpleakUtility();
         $this->_utility = $utility;
 
-        $config = IpleakConfig::make_config();
+        $config = IpleakConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

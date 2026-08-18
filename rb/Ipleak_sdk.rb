@@ -28,7 +28,7 @@ class IpleakSDK
     utility = IpleakUtility.new
     @_utility = utility
 
-    config = IpleakConfig.make_config
+    config = IpleakConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
