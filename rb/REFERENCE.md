@@ -93,18 +93,18 @@ ip_information = client.IpInformation
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `asn` | `String` | No |  |
-| `asn_org` | `String` | No |  |
-| `city` | `String` | No |  |
-| `country_code` | `String` | No |  |
-| `country_name` | `String` | No |  |
-| `ip` | `String` | No |  |
-| `isp` | `String` | No |  |
-| `latitude` | `Float` | No |  |
-| `longitude` | `Float` | No |  |
-| `postal_code` | `String` | No |  |
-| `region` | `String` | No |  |
-| `timezone` | `String` | No |  |
+| `asn` | `String` | No | Autonomous System Number |
+| `asn_org` | `String` | No | Organization associated with the ASN |
+| `city` | `String` | No | City name |
+| `country_code` | `String` | No | ISO country code |
+| `country_name` | `String` | No | Country name |
+| `ip` | `String` | No | The IP address queried |
+| `isp` | `String` | No | Internet Service Provider |
+| `latitude` | `Float` | No | Latitude coordinate |
+| `longitude` | `Float` | No | Longitude coordinate |
+| `postal_code` | `String` | No | Postal code |
+| `region` | `String` | No | Region or state |
+| `timezone` | `String` | No | Timezone of the IP location |
 
 ### Operations
 

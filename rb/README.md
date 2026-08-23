@@ -237,18 +237,18 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `asn` |  |
-| `asn_org` |  |
-| `city` |  |
-| `country_code` |  |
-| `country_name` |  |
-| `ip` |  |
-| `isp` |  |
-| `latitude` |  |
-| `longitude` |  |
-| `postal_code` |  |
-| `region` |  |
-| `timezone` |  |
+| `asn` | Autonomous System Number |
+| `asn_org` | Organization associated with the ASN |
+| `city` | City name |
+| `country_code` | ISO country code |
+| `country_name` | Country name |
+| `ip` | The IP address queried |
+| `isp` | Internet Service Provider |
+| `latitude` | Latitude coordinate |
+| `longitude` | Longitude coordinate |
+| `postal_code` | Postal code |
+| `region` | Region or state |
+| `timezone` | Timezone of the IP location |
 
 Operations: Load.
 
@@ -273,18 +273,18 @@ Create an instance: `ip_information = client.IpInformation`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `asn` | `String` |  |
-| `asn_org` | `String` |  |
-| `city` | `String` |  |
-| `country_code` | `String` |  |
-| `country_name` | `String` |  |
-| `ip` | `String` |  |
-| `isp` | `String` |  |
-| `latitude` | `Float` |  |
-| `longitude` | `Float` |  |
-| `postal_code` | `String` |  |
-| `region` | `String` |  |
-| `timezone` | `String` |  |
+| `asn` | `String` | Autonomous System Number |
+| `asn_org` | `String` | Organization associated with the ASN |
+| `city` | `String` | City name |
+| `country_code` | `String` | ISO country code |
+| `country_name` | `String` | Country name |
+| `ip` | `String` | The IP address queried |
+| `isp` | `String` | Internet Service Provider |
+| `latitude` | `Float` | Latitude coordinate |
+| `longitude` | `Float` | Longitude coordinate |
+| `postal_code` | `String` | Postal code |
+| `region` | `String` | Region or state |
+| `timezone` | `String` | Timezone of the IP location |
 
 #### Example: Load
 

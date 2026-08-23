@@ -19,6 +19,9 @@ module IpleakConfig
     {
       "main" => {
         "name" => "Ipleak",
+        "slug" => "ipleak",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,50 +44,62 @@ module IpleakConfig
           "fields" => [
             {
               "name" => "asn",
+              "short" => "Autonomous System Number",
               "type" => "`$STRING`",
             },
             {
               "name" => "asn_org",
+              "short" => "Organization associated with the ASN",
               "type" => "`$STRING`",
             },
             {
               "name" => "city",
+              "short" => "City name",
               "type" => "`$STRING`",
             },
             {
               "name" => "country_code",
+              "short" => "ISO country code",
               "type" => "`$STRING`",
             },
             {
               "name" => "country_name",
+              "short" => "Country name",
               "type" => "`$STRING`",
             },
             {
               "name" => "ip",
+              "short" => "The IP address queried",
               "type" => "`$STRING`",
             },
             {
               "name" => "isp",
+              "short" => "Internet Service Provider",
               "type" => "`$STRING`",
             },
             {
               "name" => "latitude",
+              "short" => "Latitude coordinate",
               "type" => "`$NUMBER`",
             },
             {
               "name" => "longitude",
+              "short" => "Longitude coordinate",
               "type" => "`$NUMBER`",
             },
             {
               "name" => "postal_code",
+              "short" => "Postal code",
               "type" => "`$STRING`",
             },
             {
               "name" => "region",
+              "short" => "Region or state",
               "type" => "`$STRING`",
             },
             {
               "name" => "timezone",
+              "short" => "Timezone of the IP location",
               "type" => "`$STRING`",
             },
           ],

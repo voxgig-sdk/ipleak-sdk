@@ -227,18 +227,18 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `asn` |  |
-| `asn_org` |  |
-| `city` |  |
-| `country_code` |  |
-| `country_name` |  |
-| `ip` |  |
-| `isp` |  |
-| `latitude` |  |
-| `longitude` |  |
-| `postal_code` |  |
-| `region` |  |
-| `timezone` |  |
+| `asn` | Autonomous System Number |
+| `asn_org` | Organization associated with the ASN |
+| `city` | City name |
+| `country_code` | ISO country code |
+| `country_name` | Country name |
+| `ip` | The IP address queried |
+| `isp` | Internet Service Provider |
+| `latitude` | Latitude coordinate |
+| `longitude` | Longitude coordinate |
+| `postal_code` | Postal code |
+| `region` | Region or state |
+| `timezone` | Timezone of the IP location |
 
 Operations: Load.
 
@@ -263,18 +263,18 @@ Create an instance: `local ip_information = client:IpInformation(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `asn` | `string` |  |
-| `asn_org` | `string` |  |
-| `city` | `string` |  |
-| `country_code` | `string` |  |
-| `country_name` | `string` |  |
-| `ip` | `string` |  |
-| `isp` | `string` |  |
-| `latitude` | `number` |  |
-| `longitude` | `number` |  |
-| `postal_code` | `string` |  |
-| `region` | `string` |  |
-| `timezone` | `string` |  |
+| `asn` | `string` | Autonomous System Number |
+| `asn_org` | `string` | Organization associated with the ASN |
+| `city` | `string` | City name |
+| `country_code` | `string` | ISO country code |
+| `country_name` | `string` | Country name |
+| `ip` | `string` | The IP address queried |
+| `isp` | `string` | Internet Service Provider |
+| `latitude` | `number` | Latitude coordinate |
+| `longitude` | `number` | Longitude coordinate |
+| `postal_code` | `string` | Postal code |
+| `region` | `string` | Region or state |
+| `timezone` | `string` | Timezone of the IP location |
 
 #### Example: Load
 

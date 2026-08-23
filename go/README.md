@@ -6,7 +6,7 @@ The Golang SDK for the Ipleak API — an entity-oriented client using standard G
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.IpInformation(nil)` — each with the same small set of operations (`Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -258,18 +258,18 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"asn"` |  |
-| `"asn_org"` |  |
-| `"city"` |  |
-| `"country_code"` |  |
-| `"country_name"` |  |
-| `"ip"` |  |
-| `"isp"` |  |
-| `"latitude"` |  |
-| `"longitude"` |  |
-| `"postal_code"` |  |
-| `"region"` |  |
-| `"timezone"` |  |
+| `"asn"` | Autonomous System Number |
+| `"asn_org"` | Organization associated with the ASN |
+| `"city"` | City name |
+| `"country_code"` | ISO country code |
+| `"country_name"` | Country name |
+| `"ip"` | The IP address queried |
+| `"isp"` | Internet Service Provider |
+| `"latitude"` | Latitude coordinate |
+| `"longitude"` | Longitude coordinate |
+| `"postal_code"` | Postal code |
+| `"region"` | Region or state |
+| `"timezone"` | Timezone of the IP location |
 
 Operations: Load.
 
@@ -294,18 +294,18 @@ Create an instance: `ipInformation := client.IpInformation(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `asn` | `string` |  |
-| `asn_org` | `string` |  |
-| `city` | `string` |  |
-| `country_code` | `string` |  |
-| `country_name` | `string` |  |
-| `ip` | `string` |  |
-| `isp` | `string` |  |
-| `latitude` | `float64` |  |
-| `longitude` | `float64` |  |
-| `postal_code` | `string` |  |
-| `region` | `string` |  |
-| `timezone` | `string` |  |
+| `asn` | `string` | Autonomous System Number |
+| `asn_org` | `string` | Organization associated with the ASN |
+| `city` | `string` | City name |
+| `country_code` | `string` | ISO country code |
+| `country_name` | `string` | Country name |
+| `ip` | `string` | The IP address queried |
+| `isp` | `string` | Internet Service Provider |
+| `latitude` | `float64` | Latitude coordinate |
+| `longitude` | `float64` | Longitude coordinate |
+| `postal_code` | `string` | Postal code |
+| `region` | `string` | Region or state |
+| `timezone` | `string` | Timezone of the IP location |
 
 #### Example: Load
 

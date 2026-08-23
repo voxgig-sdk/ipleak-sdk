@@ -242,18 +242,18 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `asn` |  |
-| `asn_org` |  |
-| `city` |  |
-| `country_code` |  |
-| `country_name` |  |
-| `ip` |  |
-| `isp` |  |
-| `latitude` |  |
-| `longitude` |  |
-| `postal_code` |  |
-| `region` |  |
-| `timezone` |  |
+| `asn` | Autonomous System Number |
+| `asn_org` | Organization associated with the ASN |
+| `city` | City name |
+| `country_code` | ISO country code |
+| `country_name` | Country name |
+| `ip` | The IP address queried |
+| `isp` | Internet Service Provider |
+| `latitude` | Latitude coordinate |
+| `longitude` | Longitude coordinate |
+| `postal_code` | Postal code |
+| `region` | Region or state |
+| `timezone` | Timezone of the IP location |
 
 Operations: Load.
 
@@ -278,18 +278,18 @@ Create an instance: `ip_information = client.IpInformation()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `asn` | `str` |  |
-| `asn_org` | `str` |  |
-| `city` | `str` |  |
-| `country_code` | `str` |  |
-| `country_name` | `str` |  |
-| `ip` | `str` |  |
-| `isp` | `str` |  |
-| `latitude` | `float` |  |
-| `longitude` | `float` |  |
-| `postal_code` | `str` |  |
-| `region` | `str` |  |
-| `timezone` | `str` |  |
+| `asn` | `str` | Autonomous System Number |
+| `asn_org` | `str` | Organization associated with the ASN |
+| `city` | `str` | City name |
+| `country_code` | `str` | ISO country code |
+| `country_name` | `str` | Country name |
+| `ip` | `str` | The IP address queried |
+| `isp` | `str` | Internet Service Provider |
+| `latitude` | `float` | Latitude coordinate |
+| `longitude` | `float` | Longitude coordinate |
+| `postal_code` | `str` | Postal code |
+| `region` | `str` | Region or state |
+| `timezone` | `str` | Timezone of the IP location |
 
 #### Example: Load
 

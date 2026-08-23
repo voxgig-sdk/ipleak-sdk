@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -288,18 +288,18 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `asn` |  |
-| `asn_org` |  |
-| `city` |  |
-| `country_code` |  |
-| `country_name` |  |
-| `ip` |  |
-| `isp` |  |
-| `latitude` |  |
-| `longitude` |  |
-| `postal_code` |  |
-| `region` |  |
-| `timezone` |  |
+| `asn` | Autonomous System Number |
+| `asn_org` | Organization associated with the ASN |
+| `city` | City name |
+| `country_code` | ISO country code |
+| `country_name` | Country name |
+| `ip` | The IP address queried |
+| `isp` | Internet Service Provider |
+| `latitude` | Latitude coordinate |
+| `longitude` | Longitude coordinate |
+| `postal_code` | Postal code |
+| `region` | Region or state |
+| `timezone` | Timezone of the IP location |
 
 Operations: load.
 
@@ -324,18 +324,18 @@ Create an instance: `const ip_information = client.IpInformation()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `asn` | `string` |  |
-| `asn_org` | `string` |  |
-| `city` | `string` |  |
-| `country_code` | `string` |  |
-| `country_name` | `string` |  |
-| `ip` | `string` |  |
-| `isp` | `string` |  |
-| `latitude` | `number` |  |
-| `longitude` | `number` |  |
-| `postal_code` | `string` |  |
-| `region` | `string` |  |
-| `timezone` | `string` |  |
+| `asn` | `string` | Autonomous System Number |
+| `asn_org` | `string` | Organization associated with the ASN |
+| `city` | `string` | City name |
+| `country_code` | `string` | ISO country code |
+| `country_name` | `string` | Country name |
+| `ip` | `string` | The IP address queried |
+| `isp` | `string` | Internet Service Provider |
+| `latitude` | `number` | Latitude coordinate |
+| `longitude` | `number` | Longitude coordinate |
+| `postal_code` | `string` | Postal code |
+| `region` | `string` | Region or state |
+| `timezone` | `string` | Timezone of the IP location |
 
 #### Example: Load
 

@@ -87,18 +87,18 @@ ip_information = client.IpInformation()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `asn` | `str` | No |  |
-| `asn_org` | `str` | No |  |
-| `city` | `str` | No |  |
-| `country_code` | `str` | No |  |
-| `country_name` | `str` | No |  |
-| `ip` | `str` | No |  |
-| `isp` | `str` | No |  |
-| `latitude` | `float` | No |  |
-| `longitude` | `float` | No |  |
-| `postal_code` | `str` | No |  |
-| `region` | `str` | No |  |
-| `timezone` | `str` | No |  |
+| `asn` | `str` | No | Autonomous System Number |
+| `asn_org` | `str` | No | Organization associated with the ASN |
+| `city` | `str` | No | City name |
+| `country_code` | `str` | No | ISO country code |
+| `country_name` | `str` | No | Country name |
+| `ip` | `str` | No | The IP address queried |
+| `isp` | `str` | No | Internet Service Provider |
+| `latitude` | `float` | No | Latitude coordinate |
+| `longitude` | `float` | No | Longitude coordinate |
+| `postal_code` | `str` | No | Postal code |
+| `region` | `str` | No | Region or state |
+| `timezone` | `str` | No | Timezone of the IP location |
 
 ### Operations
 

@@ -8,61 +8,73 @@ main: kit: entity: ip_information: {
     {
       name: "asn"
       req: false
+      short: "Autonomous System Number"
       type: "`$STRING`"
     }
     {
       name: "asn_org"
       req: false
+      short: "Organization associated with the ASN"
       type: "`$STRING`"
     }
     {
       name: "city"
       req: false
+      short: "City name"
       type: "`$STRING`"
     }
     {
       name: "country_code"
       req: false
+      short: "ISO country code"
       type: "`$STRING`"
     }
     {
       name: "country_name"
       req: false
+      short: "Country name"
       type: "`$STRING`"
     }
     {
       name: "ip"
       req: false
+      short: "The IP address queried"
       type: "`$STRING`"
     }
     {
       name: "isp"
       req: false
+      short: "Internet Service Provider"
       type: "`$STRING`"
     }
     {
       name: "latitude"
       req: false
+      short: "Latitude coordinate"
       type: "`$NUMBER`"
     }
     {
       name: "longitude"
       req: false
+      short: "Longitude coordinate"
       type: "`$NUMBER`"
     }
     {
       name: "postal_code"
       req: false
+      short: "Postal code"
       type: "`$STRING`"
     }
     {
       name: "region"
       req: false
+      short: "Region or state"
       type: "`$STRING`"
     }
     {
       name: "timezone"
       req: false
+      short: "Timezone of the IP location"
       type: "`$STRING`"
     }
   ]

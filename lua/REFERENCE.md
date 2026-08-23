@@ -90,18 +90,18 @@ local ip_information = client:IpInformation(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `asn` | `string` | No |  |
-| `asn_org` | `string` | No |  |
-| `city` | `string` | No |  |
-| `country_code` | `string` | No |  |
-| `country_name` | `string` | No |  |
-| `ip` | `string` | No |  |
-| `isp` | `string` | No |  |
-| `latitude` | `number` | No |  |
-| `longitude` | `number` | No |  |
-| `postal_code` | `string` | No |  |
-| `region` | `string` | No |  |
-| `timezone` | `string` | No |  |
+| `asn` | `string` | No | Autonomous System Number |
+| `asn_org` | `string` | No | Organization associated with the ASN |
+| `city` | `string` | No | City name |
+| `country_code` | `string` | No | ISO country code |
+| `country_name` | `string` | No | Country name |
+| `ip` | `string` | No | The IP address queried |
+| `isp` | `string` | No | Internet Service Provider |
+| `latitude` | `number` | No | Latitude coordinate |
+| `longitude` | `number` | No | Longitude coordinate |
+| `postal_code` | `string` | No | Postal code |
+| `region` | `string` | No | Region or state |
+| `timezone` | `string` | No | Timezone of the IP location |
 
 ### Operations
 
