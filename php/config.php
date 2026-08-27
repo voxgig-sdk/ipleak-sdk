@@ -42,6 +42,7 @@ class IpleakConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
