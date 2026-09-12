@@ -93,11 +93,13 @@ class IpleakConfig
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'float',
               'name' => 'latitude',
               'short' => 'Latitude coordinate',
               'type' => '`$NUMBER`',
             ],
             [
+              'format' => 'float',
               'name' => 'longitude',
               'short' => 'Longitude coordinate',
               'type' => '`$NUMBER`',
@@ -140,9 +142,13 @@ class IpleakConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/json/{ip}',
-                  'parts' => [
-                    'json',
-                    '{ip}',
+                  'segments' => [
+                    [
+                      'lit' => 'json',
+                    ],
+                    [
+                      'var' => 'ip',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -152,6 +158,10 @@ class IpleakConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'json',
+                    '{ip}',
                   ],
                 ],
               ],

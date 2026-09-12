@@ -48,12 +48,14 @@ main: kit: entity: ip_information: {
       type: "`$STRING`"
     }
     {
+      format: "float"
       name: "latitude"
       req: false
       short: "Latitude coordinate"
       type: "`$NUMBER`"
     }
     {
+      format: "float"
       name: "longitude"
       req: false
       short: "Longitude coordinate"
@@ -99,9 +101,13 @@ main: kit: entity: ip_information: {
           }
           method: "GET"
           orig: "/json/{ip}"
-          parts: [
-            "json"
-            "{ip}"
+          segments: [
+            {
+              lit: "json"
+            }
+            {
+              var: "ip"
+            }
           ]
           select: {
             exist: [

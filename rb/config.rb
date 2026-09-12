@@ -79,11 +79,13 @@ module IpleakConfig
               "type" => "`$STRING`",
             },
             {
+              "format" => "float",
               "name" => "latitude",
               "short" => "Latitude coordinate",
               "type" => "`$NUMBER`",
             },
             {
+              "format" => "float",
               "name" => "longitude",
               "short" => "Longitude coordinate",
               "type" => "`$NUMBER`",
@@ -126,9 +128,13 @@ module IpleakConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/json/{ip}",
-                  "parts" => [
-                    "json",
-                    "{ip}",
+                  "segments" => [
+                    {
+                      "lit" => "json",
+                    },
+                    {
+                      "var" => "ip",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -139,6 +145,10 @@ module IpleakConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "json",
+                    "{ip}",
+                  ],
                 },
               ],
             },
