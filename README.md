@@ -105,7 +105,7 @@ local result, err = client:IpInformation():load({ ip = "example" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/ipleak` | publish pending — [install from git tag](https://github.com/voxgig-sdk/ipleak-sdk/releases) |
+| TypeScript | `@voxgig-sdk/ipleak-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/ipleak-sdk/releases) |
 | Python | `voxgig-sdk-ipleak` | publish pending — [install from git tag](https://github.com/voxgig-sdk/ipleak-sdk/releases) |
 | PHP | `voxgig-sdk/ipleak` | publish pending — [install from git tag](https://github.com/voxgig-sdk/ipleak-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/ipleak-sdk/go` | `go get github.com/voxgig-sdk/ipleak-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:IpInformation():load({ ip = "example" })
 ### TypeScript
 
 ```ts
-import { IpleakSDK } from '@voxgig-sdk/ipleak'
+import { IpleakSDK } from '@voxgig-sdk/ipleak-sdk'
 
 const client = new IpleakSDK()
 

@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { IpleakSDK } from '@voxgig-sdk/ipleak'
+import { IpleakSDK } from '@voxgig-sdk/ipleak-sdk'
 
 const client = new IpleakSDK()
 ```
@@ -426,7 +426,7 @@ ipleak/
 Import the SDK from the package root:
 
 ```ts
-import { IpleakSDK } from '@voxgig-sdk/ipleak'
+import { IpleakSDK } from '@voxgig-sdk/ipleak-sdk'
 ```
 
 ### Entity state
